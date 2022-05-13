@@ -1,0 +1,6 @@
+# action.yml
+name: 'Hello Andes ToolChains'
+description: 'Greet someone and record the time'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
