@@ -11,6 +11,5 @@ jobs:
       
       - name: Run a nds32 command
         run: |
-          cd /
           pwd
           ls
