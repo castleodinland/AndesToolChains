@@ -10,4 +10,7 @@ jobs:
         uses: castleodinland/build_docker_and_run@v1
       
       - name: Run a nds32 command
-        run: nds32le-elf-gcc
+        run: |
+          cd /
+          pwd
+          ls
