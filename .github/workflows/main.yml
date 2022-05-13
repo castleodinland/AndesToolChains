@@ -11,6 +11,9 @@ jobs:
       
       - name: Run a nds32 command
         run: |
-          cd /
+          cd /home/runner/work/
+          pwd
+          ls
+          cd /usr/bin/docker/
           pwd
           ls
