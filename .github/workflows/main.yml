@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: castleodinland/build_docker_and_run@v4
+        uses: castleodinland/build_docker_and_run@master 
       
       - name: Run a nds32 command
         run: nds32le-elf-gcc
