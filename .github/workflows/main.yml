@@ -7,10 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        # uses: castleodinland/build_docker_and_run@v1
-        uses: actions/hello-world-docker-action@master
-        with:
-          who-to-greet: 'Mona the Octocat'
+        uses: castleodinland/build_docker_and_run@master
       
       - name: Run a nds32 command
         run: pwd
