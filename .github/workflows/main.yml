@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: actions/build_docker_and_run@v1
+        uses: action/build_docker_and_run@v1
       
       - name: Run a nds32 command
         run: nds32le-elf-gcc
