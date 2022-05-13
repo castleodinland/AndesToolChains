@@ -17,7 +17,7 @@ ENV WORK_PATH /usr/local/
 ENV ANDES_COMPILE_PACKAGE Andes_Tools_Chains
 
 #把Andes ToolChain安装包从本地电脑复制到工作目录
-ADD AndesToolsChain.tar.xz ./
+ADD AndesToolsChain.tar.xz /
 #ADD nds32le-elf-mculib-v3s.txz ./Andes/toolschain
 
 #install packages
