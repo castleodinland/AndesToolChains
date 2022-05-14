@@ -1,23 +1,23 @@
-# Docker image of hbase cluster
-# VERSION 0.0.1
-# Author: Castle
+# Docker image of Andes Compilation environment
+# VERSION 1.0.3
+# Author: castleodinland
 
-#基础镜像使用ubuntu22.04
+#base image ubuntu22.04
 FROM ubuntu:22.04
 
-#作者
-MAINTAINER CastleOdinland <castleodinland@gmail.com>
+#MAINTAINER not used anymore?
+LABEL maintainer="castleodinland@gmail.com"
 
-#定义工作目录
+#define work folder
 ENV WORK_PATH /usr/local/
 
 #RUN mkdir -p /Andes
 
-#定义Andes ToolChain文件夹名称
+#define Andes ToolChain folder name
 ENV ANDES_COMPILE_PACKAGE Andes_Tools_Chains
 
-#把Andes ToolChain安装包从本地电脑复制到工作目录
-ADD AndesToolsChain.tar.xz /
+#copy Andes ToolChains
+ADD AndesToolsChain.tar.xz ./
 #ADD nds32le-elf-mculib-v3s.txz ./Andes/toolschain
 
 #install packages
@@ -30,6 +30,7 @@ RUN echo 'y' | apt install python3
 ENV PATH=/Andes/toolchains/nds32le-elf-mculib-v3s/bin:$PATH
 ENV PATH=/Andes/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/bin:$PATH
 
-#ADD auto_compile_proj.tar.xz ./
+#SDK package to test compiler
+ADD auto_compile_proj.tar.xz ./
 
 
