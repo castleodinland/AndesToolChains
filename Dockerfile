@@ -31,6 +31,6 @@ ENV PATH=/Andes/toolchains/nds32le-elf-mculib-v3s/bin:$PATH
 ENV PATH=/Andes/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/bin:$PATH
 
 #SDK package to test compiler
-ADD auto_compile_proj.tar.xz ./
+#ADD auto_compile_proj.tar.xz ./
 
 
