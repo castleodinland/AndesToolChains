@@ -26,6 +26,7 @@ RUN apt-get install make
 RUN echo 'y' | apt-get install lib32z1 
 RUN echo 'y' | apt install python3
 #RUN apt-get install python3-pip
+RUN echo 'y' | apt-get install zip
 
 ENV PATH=/Andes/toolchains/nds32le-elf-mculib-v3s/bin:$PATH
 ENV PATH=/Andes/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/bin:$PATH
