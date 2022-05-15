@@ -11,7 +11,7 @@ jobs:
       
       - name: Run a nds32 command
         run: |
-          cd /home/
+          cd /
           echo "step1"
           pwd
           echo "step2"
