@@ -11,9 +11,10 @@ jobs:
       
       - name: Run a nds32 command
         run: |
-          cd /home/runner/work/
+          cd /github/workspace/
+          echo "step1"
           pwd
+          echo "step2"
           ls
-          cd /usr/bin/docker/
-          pwd
-          ls
+          echo "step3"
+
