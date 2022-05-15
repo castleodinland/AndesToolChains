@@ -11,7 +11,7 @@ jobs:
       
       - name: Run a nds32 command
         run: |
-          cd /home/runner/work/AndesToolChains/
+          cd /home/runner/work/AndesToolChains/AndesToolChains/
           echo "step1"
           pwd
           echo "step2"
