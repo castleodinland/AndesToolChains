@@ -11,10 +11,11 @@ jobs:
       
       - name: Run a nds32 command
         run: |
-          cd /home/runner/work/AndesToolChains/AndesToolChains/
+          cd /home/
           echo "step1"
           pwd
           echo "step2"
           ls
           echo "step3"
+          find . -name "Andes*"
 
