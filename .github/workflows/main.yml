@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: castleodinland/build_docker_and_run@v1
+        uses: castleodinland/AndesToolChains@v1
       
       - name: Run a nds32 command
         run: |
