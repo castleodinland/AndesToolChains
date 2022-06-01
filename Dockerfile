@@ -28,8 +28,13 @@ RUN echo 'y' | apt install python3
 #RUN apt-get install python3-pip
 RUN echo 'y' | apt-get install zip
 
+RUN echo 'y' | apt install python3-pip
+RUN echo 'y' | pip install chardet
+
+
 ENV PATH=/Andes/toolchains/nds32le-elf-mculib-v3s/bin:$PATH
 ENV PATH=/Andes/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/bin:$PATH
+
 
 #SDK package to test compiler
 #ADD auto_compile_proj.tar.xz ./
