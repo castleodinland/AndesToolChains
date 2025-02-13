@@ -22,6 +22,7 @@ ADD AndesToolsChain.tar.xz ./
 
 #install packages
 RUN apt-get update 
+RUN apt-get install -y git
 RUN apt-get install make
 RUN echo 'y' | apt-get install lib32z1 
 RUN echo 'y' | apt install python3
