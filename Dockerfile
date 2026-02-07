@@ -2,6 +2,10 @@
 # VERSION 1.0.4
 # Author: castleodinland
 
+#推送到阿里云镜像仓库：
+#docker tag andes_build_tools_v323:latest registry.cn-hangzhou.aliyuncs.com/castlecai/castle_test_image_vscode:latest
+#docker push registry.cn-hangzhou.aliyuncs.com/castlecai/castle_test_image_vscode:latest
+
 FROM ubuntu:22.04
 
 LABEL maintainer="castleodinland@gmail.com"
@@ -37,6 +41,7 @@ RUN dpkg --add-architecture i386 && \
 # 如果不是，请先 build 一次失败后 docker run -it 进去 ls /andes 查看实际路径
 ENV PATH="/andes_tools/Andes/toolchains/nds32le-elf-mculib-v3s/bin:${PATH}"
 ENV PATH="/andes_tools/Andes/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/bin:${PATH}"
+ENV PATH="/andes_tools/Andes/utils:${PATH}"
 
 # 如果有 SDK 测试项目，可以在这里 ADD（注释掉了就先不加）
 ADD auto_compile_proj.tar.xz /andes_tools/project/
