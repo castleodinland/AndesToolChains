@@ -16,9 +16,12 @@ WORKDIR /andes_tools
 # 定义工具链包名 ✅ 推荐格式
 ENV ANDES_COMPILE_PACKAGE=Andes_Tools_Chains
 
+ENV ANDES_COMPILE_UTILS=/andes_tools/AndesBuildTools/utils
+
 
 # 复制工具链 tar.xz 并解压（假设 tar.xz 根目录就是 Andes/ 或直接 toolchains/，根据你的实际 tar 内容调整）
 ADD AndesToolsChain.tar.xz /andes_tools/
+# ADD AndesBuildToolsV325.tar.xz /andes_tools/
 # 如果 tar.xz 解压后是 Andes/ 目录，就用下面这行代替上面（更安全）
 # RUN tar -xf AndesToolsChain.tar.xz && rm AndesToolsChain.tar.xz
 
@@ -39,9 +42,9 @@ RUN dpkg --add-architecture i386 && \
 # 设置 PATH（根据你的 tar.xz 解压结构调整路径）
 # 假设解压后在 /andes_tools/Andes/toolchains/nds32le-elf-mculib-v3s/bin
 # 如果不是，请先 build 一次失败后 docker run -it 进去 ls /andes 查看实际路径
-ENV PATH="/andes_tools/Andes/toolchains/nds32le-elf-mculib-v3s/bin:${PATH}"
-ENV PATH="/andes_tools/Andes/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/bin:${PATH}"
-ENV PATH="/andes_tools/Andes/utils:${PATH}"
+ENV PATH="/andes_tools/AndesBuildTools/nds32le-elf-mculib-v3s/bin:${PATH}"
+ENV PATH="/andes_tools/AndesBuildTools/nds32le-elf-mculib-v3s/nds32le-elf/bin:${PATH}"
+ENV PATH="/andes_tools/AndesBuildTools/utils:${PATH}"
 
 # 如果有 SDK 测试项目，可以在这里 ADD（注释掉了就先不加）
 ADD auto_compile_proj.tar.xz /andes_tools/project/
